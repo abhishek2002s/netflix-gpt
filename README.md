@@ -1,6 +1,9 @@
 # Netflix GPT
 - first step we will setup our app
 - second we will setup tailwind in app
+- Header ☑
+- Login Form ☑
+- sign up form ☑
 
 # Features
 # step - 1
