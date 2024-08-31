@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import Header from "./Header";
-import { useNavigate } from "react-router-dom";
-import { BG_URL } from "../utils/contant-url";
+import { BG_URL, user_Avatar } from "../utils/contant-url";
 import { checkValidData } from "../utils/Validation";
 import {
   createUserWithEmailAndPassword,
@@ -11,10 +10,10 @@ import {
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+
 const Login = () => {
   const [isSingInFrom, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const name = useRef(null);
@@ -51,7 +50,7 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: "https://avatars.githubusercontent.com/u/116661888?v=4",
+            photoURL: user_Avatar,
           })
             .then(() => {
               // Profile updated!
@@ -61,9 +60,9 @@ const Login = () => {
                   uid: uid, 
                   email: email, 
                   displayName: displayName,
+                  photoURL : photoURL,
                 }),
               );
-              navigate("/browse");
               // ...
             })
             .catch((error) => {
@@ -72,13 +71,11 @@ const Login = () => {
             });
           // ...
           // console.log(user);
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
           setErrorMessage(errorCode + "-" + errorMessage);
-          navigate("/");
           // ..
         });
     } else {
@@ -91,8 +88,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user);
-          navigate("/browse");
           // ...
         })
         .catch((error) => {

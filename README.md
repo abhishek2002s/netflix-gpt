@@ -1,6 +1,9 @@
 # Netflix GPT
 - first step we will setup our app
 - second we will setup tailwind in app
+
+
+# step1 start
 - Header ☑
 - Routing app ☑
 - Login Form ☑
@@ -14,7 +17,19 @@
 - Craeted Redux Store With USerSlice ☑
 - Implemented SignOut ☑
 - Update Profile ☑
-- Fetch Movies   TMDB Movies
+- Bug Fix : sign up user and If the user not logged in - then it redirect to the login page ☑
+- Unsubscribed to the onauthStateChnaged callback ☑
+- Regsiteresd TMDB API & an app get access token ☑
+- Get Data From TMDB now playing movies ☑
+
+
+# step 2 start here ::
+- Custom hook for now playing movies 
+- update store with movie data
+- Create a mainContainer and Secondary Conatiner 
+- Complete mainContainer
+  - Create VideoBackground 
+  - Create Tittle Video 
 
 # Features
 # step - 1
