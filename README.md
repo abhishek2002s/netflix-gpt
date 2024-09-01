@@ -31,6 +31,10 @@
   - Create VideoBackground 
   - Create Tittle Video 
 - start secondary Container
+  - completed secondary Container
+  - Build 7 different category movie section
+- browser page Completed
+
 
 
 # Features
