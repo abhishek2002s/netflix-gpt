@@ -1,6 +1,6 @@
 import React from "react";
 import { signOut } from "firebase/auth";
-import { LOGO_URL } from "../utils/contant-url";
+import { LOGO_URL, SUPPORTED_LANGUGES } from "../utils/contant-url";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -9,12 +9,14 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 import { removeUser } from "../utils/userSlice";
+import { toggleGptSearchView } from "../utils/gptSlice";
+import { changeLanguge } from "../utils/configSlce";
 
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
  const user = useSelector((store) => store.user);
-
+const showGptSearch = useSelector(store => store.gpt.showGptSearch);
 
   //sign out Authentication
   const handleSignOut = () => {
@@ -55,12 +57,35 @@ const Header = () => {
   },[]);
 
 
+
+const handleGptSearchClick = () => {
+  dispatch(toggleGptSearchView());
+}
+
+const handleLanguageChange = (e) => {
+        dispatch(changeLanguge(e.target.value));
+}
+
+    
   return (
     <div className=" flex justify-between w-full overflow-x-hidden absolute  z-20 px-12 py-3 bg-gradient-to-b from-black">
       <img src={LOGO_URL} alt="logo" className="h-20"></img>
 
 {user  && (
   <div className="flex justify-center items-center gap-3">
+  { showGptSearch && (
+  <select className="p-2  bg-gray-900 text-white m-2 border border-gray-800" onChange={handleLanguageChange}>
+  {SUPPORTED_LANGUGES.map((lang) => <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>)}
+  </select>
+)}
+
+  <button className="text-white px-3 font-semibold bg-gray-500 py-2 text-xl rounded-lg" onClick={handleGptSearchClick}> 
+   { 
+    showGptSearch ?
+   "Home Page" : "GPT Search"
+   }
+   </button>
+  
   <img src={user.photoURL} className="h-10 w-10 rounded-md"></img>
       <button
         onClick={handleSignOut}

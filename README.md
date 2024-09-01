@@ -35,7 +35,10 @@
   - Build 7 different category movie section
 - browser page Completed
 
-
+# step 3 start here :: 
+- created GPT serach page
+- create GPT search Bar page
+- intergrate GPT APIs(get Open)
 
 # Features
 # step - 1
