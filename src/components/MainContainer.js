@@ -10,7 +10,7 @@ const MainContainer = () => {
     //Early Return (Most imp checking Condition)
     if(movies === null) return;
 
-    const TrailerMovies = movies[0];
+    const TrailerMovies = movies[12];
     // console.log(TrailerMovies);
 
 

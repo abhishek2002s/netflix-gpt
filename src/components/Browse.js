@@ -1,5 +1,12 @@
 import Header from './Header'
+import useBollywoodMovies from './hooks/useBollywoodMovies';
+import useFantasyMovies from './hooks/useFantasyMovies';
+import useHorrorMovies from './hooks/useHorrorMovies';
 import useNowPlayingMovies from './hooks/useNowPlayingMovies'
+import usePopularMovies from './hooks/usePopularMovies';
+import useRomanceMovies from './hooks/useRomanceMovies';
+import useTrendingMovies from './hooks/useTrendingMovies';
+import useUpComingMovies from './hooks/useUpComingMovies';
 import MainContainer from './MainContainer';
 import SecondaryContainer from './SecondaryContainer';
 
@@ -19,6 +26,13 @@ import SecondaryContainer from './SecondaryContainer';
 const Browse = () => {
 
 useNowPlayingMovies();
+usePopularMovies();
+useTrendingMovies();
+useUpComingMovies();
+useHorrorMovies();
+useRomanceMovies();
+useFantasyMovies();
+useBollywoodMovies();
 
   return (
     <div>
