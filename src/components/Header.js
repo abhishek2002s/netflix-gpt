@@ -68,28 +68,28 @@ const handleLanguageChange = (e) => {
 
     
   return (
-    <div className=" flex justify-between w-full overflow-x-hidden absolute  z-20 px-12 py-3 bg-gradient-to-b from-black">
-      <img src={LOGO_URL} alt="logo" className="h-20"></img>
+    <div className=" flex justify-between items-center w-full overflow-x-hidden absolute  z-20 md:px-12 md:py-3 px-3 py-2 bg-gradient-to-b from-black">
+      <img src={LOGO_URL} alt="logo" className="md:h-24 h-16 w-[90px] md:w-40  md:mx-0"></img>
 
 {user  && (
-  <div className="flex justify-center items-center gap-3">
+  <div className="flex justify-center  items-center md:gap-3 lg:gap-3 gap-1">
   { showGptSearch && (
-  <select className="p-2  bg-gray-900 text-white m-2 border border-gray-800" onChange={handleLanguageChange}>
+  <select className="md:p-2 opacity-0 md:opacity-100  bg-gray-900 text-white m-2 border border-gray-800" onChange={handleLanguageChange}>
   {SUPPORTED_LANGUGES.map((lang) => <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>)}
   </select>
 )}
 
-  <button className="text-white px-3 font-semibold bg-gray-500 py-2 text-xl rounded-lg" onClick={handleGptSearchClick}> 
+  <button className="text-white px-2 text-[10px] md:px-3   font-semibold bg-gray-500 md:py-2 py-1 md:text-xl rounded-lg" onClick={handleGptSearchClick}> 
    { 
     showGptSearch ?
-   "Home Page" : "GPT Search"
+   "Home Page" : "Movie Search"
    }
    </button>
   
-  <img src={user.photoURL} className="h-10 w-10 rounded-md"></img>
+  <img src={user.photoURL} className="md:h-10 md:w-10 h-0 w-0 opacity-0 md:opacity-100 lg:opacity-100 rounded-md"></img>
       <button
         onClick={handleSignOut}
-        className=" font-semibold text-xl text-white py-2  px-4   rounded-md  text-center  bg-red-600 "
+        className=" font-semibold md:text-xl text-[10px] text-white md:py-2 py-1  md:px-4  px-3 rounded-md  text-center  bg-red-600 "
       >
         Sign Out
       </button>

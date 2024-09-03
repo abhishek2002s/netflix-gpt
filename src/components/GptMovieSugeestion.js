@@ -13,7 +13,7 @@ const GptMovieSugeestion = () => {
   // console.log(gptMovies);
 
   return (
-    <div className='p-4  m-4 h-fit  bg-black bg-opacity-80'>
+    <div className='p-2  m-4 h-fit  bg-black bg-opacity-80'>
        <div>
        <MovieList  title = {gptName} movies = {moiveResult}/>
        </div>

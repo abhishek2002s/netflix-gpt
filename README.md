@@ -24,21 +24,25 @@
 
 
 # step 2 start here ::
-- Custom hook for now playing movies 
-- update store with movie data
-- Create a mainContainer and Secondary Conatiner 
-- Complete mainContainer
-  - Create VideoBackground 
-  - Create Tittle Video 
-- start secondary Container
-  - completed secondary Container
-  - Build 7 different category movie section
-- browser page Completed
+- Custom hook for now playing movies  ☑
+- update store with movie data ☑
+- Create a mainContainer and Secondary Conatiner  ☑
+- Complete mainContainer ☑
+  - Create VideoBackground  ☑
+  - Create Tittle Video  ☑
+- start secondary Container ☑
+  - completed secondary Container ☑
+  - Build 7 different category movie section ☑
+- browser page Completed ☑
 
 # step 3 start here :: 
-- created GPT serach page
-- create GPT search Bar page
-- intergrate GPT APIs(get Open)
+- created GPT serach page ☑
+- create GPT search Bar page ☑
+- perform Serach functionality ☑
+- perform Memomization ☑
+- fixed Bugg ☑
+- complete serach Functionality ☑
+- Last thing is Responsive ☑
 
 # Features
 # step - 1
@@ -59,4 +63,7 @@
 
 - NetFlixGPT
  - search Bar
- - Movie Suggestion
+ - Search Movie 
+
+
+ # NETFLIX_GPT COMPLETE⭐⭐

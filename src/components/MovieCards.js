@@ -7,10 +7,10 @@ const MovieCards = ({ posterPath }) => {
   }
 
   return (
-    <div className="w-44 h-fit">
+    <div className="md:w-44 w-40 lg:w-44">
       <img
         alt="Now Playing Movies"
-        className="rounded-md  hover:scale-105 mx-3  mb-4 hover:outline outline-1 transition-all ease-in "
+        className="rounded-md  hover:scale-105 mx-3  mb-2 hover:outline outline-1 transition-all ease-in "
         src={IMG_CDN + posterPath}
       ></img>
     </div>

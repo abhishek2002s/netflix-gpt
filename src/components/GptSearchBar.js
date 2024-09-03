@@ -68,12 +68,9 @@ const GptSearchBar = () => {
     
 
   return (
-    <div className=' flex justify-center '>
-        <div className="absolute -z-20">
-        <img className="object-cover" src={BG_URL} alt="bg-img"></img>
-      </div>
-        <form className=' w-5/12 flex  mt-[8%] bg-black  justify-center gap-3 rounded-md p-1 m-1 ' onSubmit={(e) => e.preventDefault()}>
-            <input ref={searchText} type='text' placeholder= {Lang[langugaeKey].gptSerachPlaceHolder} className='w-[90%] py-2  px-4  border border-gray-400 rounded-md'></input>
+    <div className=' flex justify-center pt-[20%] md:pt-[15%] lg:p-[1%]'>
+        <form className='w-full md:w-10/12  lg:w-5/12 flex  mt-[8%] bg-black  justify-center gap-3 rounded-md p-1 m-1 ' onSubmit={(e) => e.preventDefault()}>
+            <input ref={searchText} type='text' placeholder= {Lang[langugaeKey].gptSerachPlaceHolder} className='w-[90%] md:py-2 py-1 px-2 md:px-4 lg:py-2  lg:px-4  border border-gray-400 rounded-md'></input>
             <button className="font-semibold text-xl text-white py-2  px-4   rounded-md  text-center  bg-red-600 " onClick={handleGptSearchClick}>{Lang[langugaeKey].search}</button>
         </form>
     </div>
