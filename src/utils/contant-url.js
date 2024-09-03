@@ -11,7 +11,7 @@ export const API_OPTIONS = {
   };
   
   export const IMG_CDN = "https://image.tmdb.org/t/p/w780"
- export const  API_CODE = "0be198f3dc71a497229a932e3f26bc";
+ export const  API_CODE = process.env.REACT_APP_API_CODE;
 
 
  export const SUPPORTED_LANGUGES = [
