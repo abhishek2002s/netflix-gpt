@@ -65,5 +65,9 @@
  - search Bar
  - Search Movie 
 
+# step-4 
+- favicon update
+- Title update
+
 
  # NETFLIX_GPT COMPLETE⭐⭐
